@@ -1,5 +1,15 @@
 Topics covered...
 
+- Normal Function
+
+- Arrow Function
+
+- Higher Order Function, Callback function
+
+- Array Methods
+  -- forEach loop
+  -- map() function
+
 - Object Destructuring
   -- Object Destructuring
   -- multi-level de-structuring
@@ -10,5 +20,4 @@ Topics covered...
 
 - Destructuring in function parameter
 
-- Optional Chaining
-- map() function
+- Optional Chaining i.e. ?.
