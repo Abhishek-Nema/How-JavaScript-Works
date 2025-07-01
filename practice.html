@@ -1,0 +1,32 @@
+<!-- // finding all elements of class: "test-class" and removing it from DOM -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <h2>This is navbar</h2>
+    </nav>
+    <div class="test-class">
+        <h3 class="test-class">I am H3</h3>
+        <p class="para-class">I am paragraph</p>
+    </div>
+    <footer class="footer-class">
+        <p class="test-class">I am footer</p>
+    </footer>
+
+    <script>
+        const testClassElements = document.getElementsByClassName("test-class")
+        for (let i = 0; i < testClassElements.length; i++) {
+            testClassElements.item(i).remove()
+        }
+    </script>
+</body>
+
+</html>

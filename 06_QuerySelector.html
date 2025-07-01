@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <p>
+        <h1>This is H1</h1>
+        </p>
+    </nav>
+    <div>
+        <h1>Heading inside body</h1>
+        <p>Lorem ipsum dolor sit.</p>
+        <pre><code>console.log("Hey there")</code></pre>
+    </div>
+
+    <script>
+        const h1 = document.querySelector("h1")
+        h1.innerText = "hey this is h1"
+
+        const div = document.querySelector("div")
+        console.log(div.parentElement.children);
+
+        const p = document.querySelectorAll("p")
+        console.log(p);
+
+    </script>
+</body>
+
+</html>
