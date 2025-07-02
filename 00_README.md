@@ -36,6 +36,12 @@ Topics covered...
 
 - document.getElementsByClassName()
 
+- addEventListener
+
+- Dynamically create elements in DOM
+  -- createElement()
+  -- appendChild()
+
 - Object Destructuring
   -- Object Destructuring
   -- multi-level de-structuring

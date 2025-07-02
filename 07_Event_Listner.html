@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div-container">
+        <h2>Hey</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam dolore repellat cumque optio nostrum
+            repellendus praesentium, minima dolor sunt velit officiis.</p>
+
+        <button id="btn">Change theme</button>
+    </div>
+
+    <!-- this script toggles between light theme and dark theme -->
+    <script>
+        const button = document.getElementById("btn")
+        const body = document.querySelector("body")
+        const div = document.getElementById("div-container")
+
+        button.addEventListener("click", () => {
+            if (div.className === "dark") {
+                div.className = "light"
+                body.style.backgroundColor = "white"
+                div.style.color = "black"
+                button.innerText = "Light theme applied!"
+            }
+            else {
+                div.className = "dark"
+                body.style.backgroundColor = "black"
+                div.style.color = "white"
+                button.innerText = "Dark theme applied!"
+            }
+        })
+    </script>
+</body>
+
+</html>

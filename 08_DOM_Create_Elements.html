@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div-container">
+        <h3>hey user</h3>
+        <p>Click the below button to add heroes in your list</p>
+        <ul id="ulList"></ul>
+    </div>
+    <button id="btn">Add Heroes</button>
+
+    <!-- this script takes user input and add that in list dynamically -->
+    <script>
+        const divContainer = document.getElementById("div-container")
+        const button = document.getElementById("btn")
+        const ulList = document.getElementById("ulList")
+
+        button.addEventListener("click", () => {
+            const listElm = document.createElement("li")
+            listElm.innerText = prompt("please enter your fav. MCU / DC character")
+            ulList.appendChild(listElm)
+        })
+    </script>
+</body>
+
+</html>
