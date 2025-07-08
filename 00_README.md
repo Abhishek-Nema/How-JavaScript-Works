@@ -42,6 +42,9 @@ Topics covered...
   -- createElement()
   -- appendChild()
 
+  - Promise
+    -- fetch() method
+
 - Object Destructuring
   -- Object Destructuring
   -- multi-level de-structuring
