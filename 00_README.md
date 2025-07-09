@@ -1,6 +1,6 @@
 Topics covered...
 
-- Normal Function
+- Function
 
 - Arrow Function
 
@@ -42,8 +42,21 @@ Topics covered...
   -- createElement()
   -- appendChild()
 
-  - Promise
-    -- fetch() method
+- Hoisting
+  -- hoisting in var, let, const
+  -- hotsing in function declaration
+  -- hoisting in function expression
+
+- var , let , const
+  -- function scope, block scope
+  -- Temporal Dead Zone
+
+- Compile time and Runtime Errors in Javasvript
+  -- Syntax Error
+  -- Reference Error
+  -- Type Error
+
+- spread operator, rest parameter
 
 - Object Destructuring
   -- Object Destructuring
