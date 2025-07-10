@@ -36,7 +36,7 @@ let splicedArray = vegeiesArray.splice(1, 0, "😎"); // means start with index(
 console.log(splicedArray);
 console.log(vegeiesArray);
 
-// sort() -
+// sort() - it modifies original array and sort them as per ASCII value (check Array-sort().js file)
 
 // reduce() - it reduces the array to a single value i.e. accumulator's value
 const myNumArr = [1, 2, 5, 4, 3];
@@ -49,6 +49,7 @@ const maxNumber = myNumArr.reduce((acc, curr_val) => {
 }, 0);
 console.log("Maximum number: ", maxNumber);
 
+// another example of reduce()
 const cartProducts = [
   {
     productName: "jeans",

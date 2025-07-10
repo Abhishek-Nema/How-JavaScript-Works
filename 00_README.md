@@ -14,7 +14,7 @@ Topics covered...
   -- slice()
   -- splice()
   -- reduce()
-  -- sort()
+  -- sort() numbers, sort() strings, ascending/descending order
 
 - Intro to DOM
   -- alert()
