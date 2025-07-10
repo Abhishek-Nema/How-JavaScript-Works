@@ -13,6 +13,8 @@ Topics covered...
   -- filter()
   -- slice()
   -- splice()
+  -- reduce()
+  -- sort()
 
 - Intro to DOM
   -- alert()
@@ -58,6 +60,10 @@ Topics covered...
 
 - spread operator, rest parameter
 
+- Ternary opetator
+  -- Ternary opetator
+  -- Conditioanl Chaining in ternary operator
+
 - Object Destructuring
   -- Object Destructuring
   -- multi-level de-structuring
@@ -68,4 +74,4 @@ Topics covered...
 
 - Destructuring in function parameter
 
-- Optional Chaining i.e. ?.
+- Optional Chaining i.e. ?. , short circuiting in logical operators

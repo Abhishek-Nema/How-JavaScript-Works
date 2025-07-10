@@ -35,3 +35,38 @@ let vegeiesArray = ["tomato", "potato", "cauliflower", "spinach", "ladyfinger"];
 let splicedArray = vegeiesArray.splice(1, 0, "😎"); // means start with index(1), delete 0 elements, add "😎"
 console.log(splicedArray);
 console.log(vegeiesArray);
+
+// sort() -
+
+// reduce() - it reduces the array to a single value i.e. accumulator's value
+const myNumArr = [1, 2, 5, 4, 3];
+const maxNumber = myNumArr.reduce((acc, curr_val) => {
+  if (acc > curr_val) {
+  } else {
+    acc = curr_val;
+  }
+  return acc;
+}, 0);
+console.log("Maximum number: ", maxNumber);
+
+const cartProducts = [
+  {
+    productName: "jeans",
+    price: 900,
+  },
+  {
+    productName: "shirt",
+    price: 700,
+  },
+  {
+    productName: "kurta",
+    price: 600,
+  },
+];
+
+const amountToPay = cartProducts.reduce((initial_val, current_val) => {
+  console.log(initial_val);
+
+  return initial_val + current_val.price;
+}, 0);
+console.log("Final amount to pay: ", amountToPay);
