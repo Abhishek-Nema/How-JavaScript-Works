@@ -4,14 +4,14 @@ console.log(a);
 const b = 5;
 let a = 25;
 
-// Reference Error (run time error): when js engine is not able to find or refer the variable in the current scope.
+// Reference Error (run time error): when js engine is not able to find or refer the variable in the scope.
 
 // Syntax Error (compile time error): when code is not following the rules of programming
 
 // const z;
 z = 51;
 
-// Type Error (run time error): Type error deals with variables and datatypes
+// Type Error (run time error):  when you try to do something that the type doesn’t support
 
 const xyz = 99;
 xyz = 1000;
