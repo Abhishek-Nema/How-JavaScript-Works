@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root-cont">
+        <h3>hello, user</h3>
+        <p>check the console for working</p>
+    </div>
+    <script>
+        // setTimeout() : wait for the miliseconds time then shows up
+        console.log('Your response is loading...');
+
+        const timeoutRes = setTimeout(function () {
+            console.log("Response loaded!");
+        }, 5000)
+
+        // setInterval : shows up for every miliseconds
+        console.log("Space shuttle will launch in...");
+
+        let count = 10
+        const intervalRes = setInterval(() => {
+            console.log(`${count--}`);
+        }, 1000);
+
+    </script>
+</body>
+
+</html>

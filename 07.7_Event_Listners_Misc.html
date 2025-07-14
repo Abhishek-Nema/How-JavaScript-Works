@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="https://google.com" id="link">Google</a>
+
+    <div id="outer">
+        <button id="btn">Click me</button>
+        <p id="output">Press a key</p> <!-- Area to display key info -->
+    </div>
+
+    <script>
+        // Prevent default link behavior (no navigation)
+        document.getElementById("link").addEventListener("click", function (e) {
+            e.preventDefault();
+            alert("Link clicked, but no redirect!");
+        });
+
+        // Logs the actual clicked element vs the one the handler is attached to
+        document.getElementById("outer").addEventListener("click", function (e) {
+            console.log("target:", e.target.id);
+            console.log("currentTarget:", e.currentTarget.id);
+        });
+
+        // Shows pressed key and whether Ctrl was held
+        document.addEventListener("keydown", (e) => {
+            document.getElementById("output").innerText = `Key pressed: ${e.key}
+            clt key pressed: ${e.ctrlKey}`
+        });
+
+        // Logs mouse position on click (viewport and screen)
+        document.addEventListener("click", function (e) {
+            console.log(`Client: ${e.clientX}, ${e.clientY}`);
+            console.log(`Screen: ${e.screenX}, ${e.screenY}`);
+        });
+
+        // Logs event type and time since page load
+        document.addEventListener("keydown", function (e) {
+            console.log("Event type:", e.type);
+            console.log("Timestamp:", e.timeStamp);
+        });
+    </script>
+</body>
+
+</html>

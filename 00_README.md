@@ -38,8 +38,6 @@ Topics covered...
 
 - document.getElementsByClassName()
 
-- addEventListener
-
 - Dynamically create elements in DOM
   -- createElement()
   -- appendChild()
@@ -63,6 +61,16 @@ Topics covered...
 - Ternary opetator
   -- Ternary opetator
   -- Conditioanl Chaining in ternary operator
+
+- Event Listener (need to practice and understand)
+  -- Event object
+  -- false is default
+  -- Event propogation : Event Bubbling (false), Event Capturing (true)
+  -- type, timestamps, preventDefault()
+  -- target, toElement, srcElement, currentTarget
+  -- clientX, clientY, screenX, screenY
+  -- altkey, ctrlkey, shiftkey, keyCode
+  -- stopPropogation()
 
 - Object Destructuring
   -- Object Destructuring

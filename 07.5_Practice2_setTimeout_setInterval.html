@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Timer</h1>
+    <h2 id="timer">5</h2>
+    <button id="startBtn">Start</button>
+    <button id="resetBtn">Reset</button>
+
+    <script>
+        let h2 = document.getElementById("timer")
+        const startBtn = document.getElementById("startBtn")
+        const resetBtn = document.getElementById("resetBtn")
+        const timerEndTime = h2.innerText
+
+        // logic for start button
+        const startTimer = function () {
+            let counter = h2.innerText
+
+            const intervalRes = setInterval(() => {
+                h2.innerText = counter
+                counter--
+            }, 1000)
+
+            const timeoutRes = setTimeout(() => {
+                clearInterval(intervalRes)
+                console.log("timer completed!");
+            }, (timerEndTime * 1000) + 1000)
+
+            // logic for reset button
+            resetBtn.addEventListener("click", function () {
+                h2.innerText = timerEndTime
+                clearInterval(intervalRes)
+                clearTimeout(timeoutRes)
+                console.log("Timer reset!");
+            })
+        }
+
+        startBtn.addEventListener("click", startTimer)
+
+    </script>
+</body>
+
+</html>

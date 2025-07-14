@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="outer" style="padding: 30px; background-color: lightblue;">
+        Outer Div
+        <div id="inner" style="padding: 30px; background-color: lightgreen;">
+            Inner Div
+            <button id="btn">Click Me</button>
+        </div>
+    </div>
+
+    <script>
+        // Event Bubbling
+        document.getElementById("outer").addEventListener("click", () => {
+            console.log("Outer clicked 👆");
+        });
+
+        document.getElementById("inner").addEventListener("click", () => {
+            console.log("Inner clicked 👇");
+        });
+
+        document.getElementById("btn").addEventListener("click", (e) => {
+            e.stopPropagation() // e.stopPropagation() will stop the bubbling
+            console.log("Button clicked 👆");
+        });
+
+        // Event Capturing
+        // document.getElementById("outer").addEventListener("click", () => {
+        //     console.log("Outer clicked (capturing) 👇");
+        // }, true);
+
+        // document.getElementById("inner").addEventListener("click", (e) => {
+        //     console.log("Inner clicked (capturing) 👇");
+        //     e.stopPropagation()
+        // }, true);
+
+        // document.getElementById("btn").addEventListener("click", () => {
+        //     console.log("Button clicked (capturing) 👇");
+        // }, true);
+
+
+    </script>
+
+</body>
+
+</html>

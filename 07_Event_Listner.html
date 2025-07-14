@@ -8,34 +8,37 @@
 </head>
 
 <body>
-    <div id="div-container">
-        <h2>Hey</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam dolore repellat cumque optio nostrum
-            repellendus praesentium, minima dolor sunt velit officiis.</p>
+    <h2 id="heading">Hello Friend!</h2>
+    <button id="changeTextBtn">Change Text</button>
 
-        <button id="btn">Change theme</button>
-    </div>
+    <input type="text" id="nameInput" placeholder="Enter your name" value="" />
+    <button id="showBtn">Show Name</button>
+    <h3 id="output"></h3>
 
-    <!-- this script toggles between light theme and dark theme -->
+
     <script>
-        const button = document.getElementById("btn")
-        const body = document.querySelector("body")
-        const div = document.getElementById("div-container")
+        // practice 1: when button gets clicked then change h2 text
 
-        button.addEventListener("click", () => {
-            if (div.className === "dark") {
-                div.className = "light"
-                body.style.backgroundColor = "white"
-                div.style.color = "black"
-                button.innerText = "Light theme applied!"
-            }
-            else {
-                div.className = "dark"
-                body.style.backgroundColor = "black"
-                div.style.color = "white"
-                button.innerText = "Dark theme applied!"
-            }
+        const h2 = document.getElementById("heading")
+        const button1 = document.getElementById("changeTextBtn")
+
+        button1.addEventListener("click", function () {
+            h2.innerText = "You clicked the button!"
         })
+
+        // practice 2: when button clicks then whatever name user inputs, save and add as h3 text
+
+        const inputBox = document.getElementById("nameInput")
+        const button2 = document.getElementById("showBtn")
+        const h3 = document.getElementById("output")
+
+        button2.addEventListener("click", function () {
+            const name = inputBox.value
+            console.log(name);
+            h3.innerText = `<h3>Hello, ${name}!</h3>`
+        })
+
+
     </script>
 </body>
 

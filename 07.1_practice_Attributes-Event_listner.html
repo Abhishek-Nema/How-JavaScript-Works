@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="nameInput" placeholder="Type your name" />
+    <br /><br />
+    <select id="dropdown">
+        <option value="">Select</option>
+        <option value="frontend">Frontend</option>
+        <option value="backend">Backend</option>
+    </select>
+    <br /><br />
+    <button id="submitBtn">Submit</button>
+
+    <script>
+        const nameInput = document.getElementById("nameInput")
+        const dropdown = document.getElementById("dropdown")
+        const submitBtn = document.getElementById("submitBtn")
+
+        // onFocus or focus in js
+        nameInput.addEventListener("focus", () => {
+            console.log("Input focused");
+        })
+
+        // onBlur or blue in js
+        nameInput.addEventListener("blur", function () {
+            console.log("Input lost focus");
+        })
+
+        // onKeyDown or keyDown in js
+        nameInput.addEventListener("keydown", function (event) {
+            console.log(`Key pressed: ${event.key}`);
+        })
+
+        // onChange or change in js
+        nameInput.addEventListener("change", function () {
+            console.log("Input changed to: [value]");
+        })
+
+        dropdown.addEventListener("change", function (params) {
+            console.log(`Dropdown selected: ${dropdown.value}`);
+        })
+
+        // onClick or click in js
+        submitBtn.addEventListener("click", function () {
+            console.log("Button clicked");
+        })
+
+        // onMouseUp or mouseup in js
+        submitBtn.addEventListener("mouseup", function () {
+            console.log("Mouse released on button");
+        })
+    </script>
+
+</body>
+
+</html>

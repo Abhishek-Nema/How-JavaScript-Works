@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root-cont">
+        <h3 id="h3_heading">Hey, user</h3>
+        <button onclick="console.log('Button clicked')">click me</button>
+
+        <button onmouseup="console.log('Mouse has released');
+        ">Released Mouse</button>
+
+        <input id="inputBox1" type="text" placeholder="Type something..."
+            onblur="console.log('User clicked out of input field');">
+
+        <input onkeydown="keyPressed()" />
+
+        <select onchange="console.log('Changed!')">
+            <option>One</option>
+            <option>Two</option>
+        </select>
+
+        <input onfocus="console.log('Input got focus')" />
+
+
+
+    </div>
+
+    <script>
+        const inputBox = document.getElementById("inputBox1")
+        const h3 = document.getElementById("h3_heading")
+
+        inputBox.addEventListener("keydown", function (e) {
+            console.log(`Key pressed by user: ${e.key}`);
+        })
+    </script>
+</body>
+
+</html>
