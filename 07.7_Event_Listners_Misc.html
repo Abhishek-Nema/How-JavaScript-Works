@@ -15,6 +15,26 @@
         <p id="output">Press a key</p> <!-- Area to display key info -->
     </div>
 
+    <!-- this line div is not related to study, just for partition -->
+    <div>
+        ------------------------------------------------------------
+        <br>
+        <br>
+    </div>
+
+    <!-- Mini project HTML part -->
+    <form id="myForm">
+        <input type="text" placeholder="Type something" />
+        <button type="submit">Submit</button>
+    </form>
+
+    <a href="https://google.com" id="myLink">Go to Google</a>
+
+    <div id="clickBox" style="width: 200px; height: 200px; background: lightblue; margin-top: 20px;">
+        Click inside me
+    </div>
+    <!-- Mini project HTML part -->
+
     <script>
         // Prevent default link behavior (no navigation)
         document.getElementById("link").addEventListener("click", function (e) {
@@ -46,6 +66,45 @@
             console.log("Timestamp:", e.timeStamp);
         });
     </script>
+
+    <script>
+        // Mini project JS part
+
+        const form = document.getElementById("myForm")
+        const link = document.getElementById("myLink")
+        const clickBox = document.getElementById("clickBox")
+
+        // 1. Prevent Form Submission & Link Navigation
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            console.log("Form submission prevented");
+        });
+
+        // 2. Prevent Link Navigation
+        link.addEventListener("click", function (e) {
+            e.preventDefault()
+        })
+
+        // 3 . Use clickBox to test: target vs currentTarget , clientX, clientY , ctrlKey, shiftKey , type, timeStamp
+
+        clickBox.addEventListener("click", function (e) {
+            clickBox.textContent = `target id: ${e.target.id},
+            currentTarget: ${e.currentTarget.id},
+            clientX: ${e.clientX},
+            clientY: ${e.clientY},
+            key pressed: ${e.key} , control key pressed: ${e.ctrlKey}, shift key pressed: ${e.shiftKey},
+            event type: ${e.type},
+            timestamp of event after reloading: ${e.timeStamp}
+           `
+        })
+
+    </script>
+
+
+
+
+
+
 </body>
 
 </html>
